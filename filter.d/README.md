@@ -10,8 +10,7 @@ apache-403.conf - In a properly configured server, critical data requires authen
 
 apache-404.conf - Many attacks consist of dozens of requests to the server for files that can be used as a path to compromising the system.  They should be blocked before they can get very far in the scan.
 
-apache-masscan.conf
-The Masscan tool is an internet scanner that was created by a "security expert" to quickly scan the Internet for ports accepting connections.  While it was intended to be a security tool, it's a hacker's delight.  A scan by this tool can be considered to be a precursor to an attack.  When received, we block the source IP.
+apache-masscan.conf - The Masscan tool is an internet scanner that was created by a "security expert" to quickly scan the Internet for ports accepting connections.  While it was intended to be a security tool, it's a hacker's delight.  A scan by this tool can be considered to be a precursor to an attack.  When received, we block the source IP.
 
 apache-pushdo.conf - This filter blocks crap from Pushdo clients as they try to obfuscate communications with their C&C servers, to avoid location of those C&C servers by the use of Traffic Analysis.  Blocking these requests forces the client to select another IP address to use to hide the C&C server, which simplifies the process of locating the C&C server.
 
