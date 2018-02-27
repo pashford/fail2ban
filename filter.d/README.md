@@ -23,22 +23,21 @@ apache-masscan.conf
 	created by a "security expert" to quickly scan the
 	Internet for ports accepting connections.  While
 	it was intended to be a security tool, it's a
-	hacker's delight.
-
-	A scan by this tool can be considered to be a
-	precursor to an attack.  When received, we block
-	the source IP.
+	hacker's delight.  A scan by this tool can be
+	considered to be a precursor to an attack.  When
+	received, we block the source IP.
 
 apache-pushdo.conf
 	This filter blocks crap from Pushdo clients as
 	they try to obfuscate communications with their
 	C&C servers, to avoid location of those C&C
-	servers by the use of Traffic Analysis.
+	servers by the use of Traffic Analysis.  Blocking
+	these requests forces the client to select another
+	IP address to use to hide the C&C server, which
+	simplifies the process of locating the C&C server.
 
 blacklist.conf
 	This file is based on the work of Mitchell Krog
 	(https://github.com/mitchellkrogza/), specifically
-	his Fail2Ban Blacklist Jail project.
-
-	It has been updated to work in the above desctibed
-	environment.
+	his Fail2Ban Blacklist Jail project.  It has been
+	updated to work in the above desctibed environment.
